@@ -32,8 +32,12 @@ To prevent default-node rate limiting while avoiding out-of-sync free nodes, the
 
 ## 🚀 How to Run
 
-1. Clone the repository and configure your Clawlett `wallet.json`.
-2. Ensure you have USDC in your Safe.
-3. Run the engine:
+Because this strategy uses the native routing files as a local oracle, it must be run from inside an initialized Clawlett environment.
+
+1. Clone the official [Creator-Bid Clawlett repository](https://github.com/Creator-Bid/Clawlett).
+2. Run `npm install` and initialize your agent/Safe according to their documentation.
+3. Download `strategy_dca.js` from this repository and place it in the root folder of your Clawlett installation (in the same directory as `swap.js`).
+4. Ensure your Safe is funded with USDC and ETH for gas.
+5. Run the engine:
 ```bash
 node strategy_dca.js
